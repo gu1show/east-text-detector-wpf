@@ -1,0 +1,23 @@
+﻿<Window x:Name="MainForm" x:Class="text_detector_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:text_detector_wpf"
+        mc:Ignorable="d"
+        Title="Text detector" Height="450" Width="600" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="1,0,-1,0">
+        <Button x:Name="OpenFolderButton" Content="Open folder" HorizontalAlignment="Left" Height="25" Margin="467,60,0,0" VerticalAlignment="Top" Width="97" Click="OpenFolderButton_Click"/>
+        <TextBox x:Name="PathTextBox" HorizontalAlignment="Left" Height="25" Margin="25,60,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="316" BorderBrush="#FF414248" FontSize="14" AcceptsReturn="True" IsReadOnly="True" HorizontalScrollBarVisibility="Hidden"/>
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Left">
+            <MenuItem x:Name="MenuAbout" Header="About">
+            </MenuItem>
+        </Menu>
+        <Label x:Name="PathLabel" Content="Path to images" HorizontalAlignment="Left" Height="30" Margin="23,25,0,0" VerticalAlignment="Top" Width="108"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Height="25" Margin="243,118,0,0" VerticalAlignment="Top" Width="96" Click="StartButton_Click"/>
+        <Label x:Name="ProgressButton" Content="Progress:" HorizontalAlignment="Left" Height="26" Margin="263,166,0,0" VerticalAlignment="Top" Width="60"/>
+        <ProgressBar x:Name="Progress" HorizontalAlignment="Left" Height="9" Margin="170,197,0,0" VerticalAlignment="Top" Width="246"/>
+        <TextBox x:Name="LogTextBox" HorizontalAlignment="Left" Height="173" Margin="23,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="541" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+        <Button x:Name="OpenFileButton" Content="Open file" HorizontalAlignment="Left" Height="25" Margin="355,60,0,0" VerticalAlignment="Top" Width="97" Click="OpenFileButton_Click"/>
+    </Grid>
+</Window>
