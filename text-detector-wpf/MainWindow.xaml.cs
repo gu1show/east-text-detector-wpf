@@ -12,7 +12,7 @@ namespace text_detector_wpf
     public partial class MainWindow : Window
     {
         bool isFolder = false;
-        ImageProcessing detector;
+        ImageProcessing imageProcessing;
         BackgroundWorker worker;
         String pathFolder;
         int numberProcessed = 0;
@@ -45,7 +45,6 @@ namespace text_detector_wpf
                 isFolder = true;
                 Progress.Maximum = Directory.GetFiles(PathTextBox.Text).Length;
             }
-
         }
 
         private void PrepareChoosingPath()
@@ -89,9 +88,9 @@ namespace text_detector_wpf
                     Progress.Value = 1;
                     ShowProcessing();
 
-                    detector = new ImageProcessing(isFolder, PathTextBox.Text);
-                    detector.DetectTextOnImage();
-                    detector.ShowAndSaveTextDetected();
+                    imageProcessing = new ImageProcessing(isFolder, PathTextBox.Text);
+                    imageProcessing.DetectTextOnImage();
+                    imageProcessing.ShowAndSaveTextDetected();
                 }
             }
         }        
@@ -164,8 +163,8 @@ namespace text_detector_wpf
                     if (worker.CancellationPending) e.Cancel = true;
                     else
                     {
-                        detector = new ImageProcessing(isFolder, imageFileName, pathFolder);
-                        detector.DetectTextOnImage();
+                        imageProcessing = new ImageProcessing(isFolder, imageFileName, pathFolder);
+                        imageProcessing.DetectTextOnImage();
                         numberProcessed++;
                         (sender as BackgroundWorker).ReportProgress(numberProcessed);
                     }
