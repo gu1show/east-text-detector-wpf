@@ -169,5 +169,10 @@ namespace text_detector_wpf
                         (sender as BackgroundWorker).ReportProgress(numberProcessed);
                     }
         }
+
+        private void MenuAbout_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/gu1show/east-text-detector-wpf/blob/main/README.md");
+        }
     }
 }

@@ -10,7 +10,7 @@
         <Button x:Name="OpenFolderButton" Content="Open folder" HorizontalAlignment="Left" Height="25" Margin="467,60,0,0" VerticalAlignment="Top" Width="97" Click="OpenFolderButton_Click"/>
         <TextBox x:Name="PathTextBox" HorizontalAlignment="Left" Height="25" Margin="25,60,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="316" BorderBrush="#FF414248" FontSize="14" AcceptsReturn="True" IsReadOnly="True" HorizontalScrollBarVisibility="Hidden"/>
         <Menu VerticalAlignment="Top" HorizontalAlignment="Left">
-            <MenuItem x:Name="MenuAbout" Header="About">
+            <MenuItem x:Name="MenuAbout" Header="About" Click="MenuAbout_Click">
             </MenuItem>
         </Menu>
         <Label x:Name="PathLabel" Content="Path to images" HorizontalAlignment="Left" Height="30" Margin="23,25,0,0" VerticalAlignment="Top" Width="108"/>
