@@ -6,9 +6,6 @@ using System.Windows.Forms;
 
 namespace text_detector_wpf
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         bool isFolder = false;
